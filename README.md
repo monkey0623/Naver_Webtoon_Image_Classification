@@ -58,7 +58,55 @@
 </table>
 
 ### ○ 전처리
+1.이미지 112X112사이즈로 resize, 패딩을 넣어주어 이미지 훼손을 줄임<br>
 
+        for label, filenames in dataset.items():
+            for filename in filenames:
+                img = cv2.imread(filename) # cv2.imread(filename = 파일경로)
+
+                    # 이미지의 x, y가 112이 넘을 경우 작게해주기
+                    percent = 1
+                    if(img.shape[1] > img.shape[0]) :       # 이미지의 가로가 세보다 크면 가로를 112으로 맞추고 세로를 비율에 맞춰서
+                        percent = 112/img.shape[1]
+                    else :
+                        percent = 112/img.shape[0]
+
+                    img = cv2.resize(img, dsize=(0, 0), fx=percent, fy=percent, interpolation=cv2.INTER_LINEAR)
+                            # 이미지 범위 지정
+                    y,x,h,w = (0,0,img.shape[0], img.shape[1])
+
+                    # 그림 주변에 검은색으로 칠하기
+                    w_x = (112-(w-x))/2  # w_x = (112 - 그림)을 뺀 나머지 영역 크기 [ 그림나머지/2 [그림] 그림나머지/2 ]
+                    h_y = (112-(h-y))/2
+
+                    if(w_x < 0):         # 크기가 -면 0으로 지정.
+                        w_x = 0
+                    elif(h_y < 0):
+                        h_y = 0
+
+                    M = np.float32([[1,0,w_x], [0,1,h_y]])  #(2*3 이차원 행렬)
+                    img_re = cv2.warpAffine(img, M, (112, 112)) #이동변환
+
+                    # cv2.imwrite('{0}.jpg',image .format(file)) #파일저장
+                    cv2.imwrite('/content/resized/{0}/{1}'.format(label, filename.split("/")[-1]) , img_re)
+2. 장르별 라벨링<br>
+
+        label2index = {'daily' : 0, 'comic' : 1 , 'fantasy' : 2 , 'action' : 3,
+                       'drama' : 4, 'pure' : 5, 'sensibility' : 6, 'thrill' : 7, 'historical' : 8, 'sports' : 9}
+
+3. Zero Centering<br>
+        
+        # zero-centering
+        def zero_mean(image):
+            return np.mean(image, axis=0)
+
+        zero_mean_img = zero_mean(x_train)
+        zero_mean_img.shape
+
+        x_train -= zero_mean_img
+        x_val -= zero_mean_img
+        x_test -= zero_mean_img
+        
 ### ○ 모델핸들링 & 모델선정
 
 ### ○ 결과
