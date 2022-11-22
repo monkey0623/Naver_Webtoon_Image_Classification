@@ -108,9 +108,13 @@
         x_test -= zero_mean_img
         
 ### ○ 모델핸들링 & 모델선정
--모델 : ResNet50, InceptionV3, VGG19, VGG16 사용<br>
--모델 핸들링 : CNN Layers(완전개방, 10층 개방, 20층 개방, 30층 개방, 40층 개방, 완전개방)<br> Dense(128,256,512)<br> Learning Rate(0.001, 0.0001, 0.00001)<br>
-               
+- 모델 : ResNet50, InceptionV3, VGG19, VGG16 사용<br>
+- 모델 핸들링 : CNN Layers(완전개방, 10층 개방, 20층 개방, 30층 개방, 40층 개방, 완전개방)<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dense(128,256,512)<br> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Learning Rate(0.001, 0.0001, 0.00001)<br>
+<img width="500" alt="modelselection" src="https://user-images.githubusercontent.com/79880476/203184863-f7acc46f-9bfb-4275-b96e-1a63a6bc92b4.jpg"><p>- 모델핸들링을 통해 통제조건 속에서 ResNet50이 전반적으로 성능이 제일 잘 나왔다.</p>
+- 미세조정
+<img width="500" alt="finetune" src="https://user-images.githubusercontent.com/79880476/203184899-9ea6717f-2237-4756-8287-eef65bd5b62f.jpg"><p>- 모델핸들링을 통해 통제조건 속에서 ResNet50이 전반적으로 성능이 제일 잘 나왔다.</p>
 ### ○ 결과
 
 ### ○ 피드백 & 성능개선의 노력
