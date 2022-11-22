@@ -122,11 +122,15 @@
 ### ○ 결과
 - 여러가지 전처리와 모델 핸들링을 통해 최대 Accuracy 0.5478가 나왔다.<br>
 
-### ○ 자체 피드백 & 성능개선의 노력
+### ○ 자체 피드백 
 - 비슷한 썸네일에 대한 모호한 라벨링 (개그? 일상? / 감성 ? 순정?)<br>
-
+<div><img width="300" alt="labels" src="https://user-images.githubusercontent.com/79880476/203188333-87e44364-6f0e-4b71-8496-8c6d51c0f473.jpg"><p>- 사람 눈으로도 분류 불가능한 모호한 장르가 모델의 성능에도 문제를 끼쳤다고 판단했다.</p></div>
 
 - 데이터양의 불균형<br>
+<div><img width="500" alt="imbalance" src="https://user-images.githubusercontent.com/79880476/203188322-6fc22123-16b8-45fc-a039-3f09ec34f4ee.jpg"><p>- 다양성을 위해 모든 장르의 썸네일을 크롤링했지만 데이터가 워낙 불균형해 해소하면 성능이 더 오를 것이라 판단했다.</p></div>
+
+### ○ 성능개선의 노력
+
 
 ### ○ 결론
 
