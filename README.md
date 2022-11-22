@@ -130,7 +130,11 @@
 <div><img width="500" alt="imbalance" src="https://user-images.githubusercontent.com/79880476/203188322-6fc22123-16b8-45fc-a039-3f09ec34f4ee.jpg"><p>- 다양성을 위해 모든 장르의 썸네일을 크롤링했지만 데이터가 워낙 불균형해 해소하면 성능이 더 오를 것이라 판단했다.</p></div>
 
 ### ○ 성능개선의 노력
+- 데이터양의 불균형<br>
+<div><img width="500" alt="imbalance" src="https://user-images.githubusercontent.com/79880476/203188322-6fc22123-16b8-45fc-a039-3f09ec34f4ee.jpg"><p>- 다양성을 위해 모든 장르의 썸네일을 크롤링했지만 데이터가 워낙 불균형해 해소하면 성능이 더 오를 것이라 판단했다.</p></div>
 
+- 데이터양의 불균형<br>
+<div><img width="500" alt="imbalance" src="https://user-images.githubusercontent.com/79880476/203188322-6fc22123-16b8-45fc-a039-3f09ec34f4ee.jpg"><p>- 다양성을 위해 모든 장르의 썸네일을 크롤링했지만 데이터가 워낙 불균형해 해소하면 성능이 더 오를 것이라 판단했다.</p></div>
 
 ### ○ 결론
 
