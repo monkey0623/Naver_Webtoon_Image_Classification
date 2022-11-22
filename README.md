@@ -122,7 +122,7 @@
 ### ○ 결과
 - 여러가지 전처리와 모델 핸들링을 통해 최대 Accuracy 0.5478가 나왔다.<br>
 
-### ○ 자체 피드백 
+### ○ 자체 피드백 & 가설
 - 비슷한 썸네일에 대한 모호한 라벨링 (개그? 일상? / 감성 ? 순정?)<br>
 <div><img width="300" alt="labels" src="https://user-images.githubusercontent.com/79880476/203188333-87e44364-6f0e-4b71-8496-8c6d51c0f473.jpg"><p>- 사람 눈으로도 분류 불가능한 모호한 장르가 모델의 성능에도 문제를 끼쳤다고 판단했다.</p></div>
 
@@ -130,11 +130,18 @@
 <div><img width="500" alt="imbalance" src="https://user-images.githubusercontent.com/79880476/203188322-6fc22123-16b8-45fc-a039-3f09ec34f4ee.jpg"><p>- 다양성을 위해 모든 장르의 썸네일을 크롤링했지만 데이터가 워낙 불균형해 해소하면 성능이 더 오를 것이라 판단했다.</p></div>
 
 ### ○ 성능개선의 노력
-- 데이터양의 불균형<br>
-<div><img width="500" alt="imbalance" src="https://user-images.githubusercontent.com/79880476/203188322-6fc22123-16b8-45fc-a039-3f09ec34f4ee.jpg"><p>- 다양성을 위해 모든 장르의 썸네일을 크롤링했지만 데이터가 워낙 불균형해 해소하면 성능이 더 오를 것이라 판단했다.</p></div>
+- 모호한 섬네일의 이진분류<br>
+<div><img width="500" alt="2jinbunryu" src="https://user-images.githubusercontent.com/79880476/203189909-5c668354-5339-402e-ae3b-a063d49ccf6d.jpg"><p>- 이진분류 시 예측 정확도가 87%이상..첫번째 가설 부적합.</p></div>
 
-- 데이터양의 불균형<br>
-<div><img width="500" alt="imbalance" src="https://user-images.githubusercontent.com/79880476/203188322-6fc22123-16b8-45fc-a039-3f09ec34f4ee.jpg"><p>- 다양성을 위해 모든 장르의 썸네일을 크롤링했지만 데이터가 워낙 불균형해 해소하면 성능이 더 오를 것이라 판단했다.</p></div>
+- 라벨수 제한<br>
+<div><img width="500" alt="labelsu" src="https://user-images.githubusercontent.com/79880476/203189934-9eb07e36-e2fa-4342-9b99-ead0eb9a6f37.jpg">
+<img width="500" alt="labelsuacc" src="https://user-images.githubusercontent.com/79880476/203189939-20498ee0-d6b0-4829-ae64-caf9207ae779.jpg">
+<p>- 라벨의 개수를 조절함으로써 성능 개선의 효과를 봤고, 구분이 모호한 장르들을 제한했을 때, 또 한번 성능이 크게 개선 되는 것을 확인했다.</p></div>
+
+- 불균형 해소를 위한 전처리<br>
+<div><img width="500" alt="imbalgetout" src="https://user-images.githubusercontent.com/79880476/203189884-c36dc45b-d6f4-4593-8ac1-bb6e3a74edf8.jpg">
+<img width="500" alt="imbalout" src="https://user-images.githubusercontent.com/79880476/203189898-18cfdad9-5e81-41a4-9494-f7febd257d56.jpg">
+<p>- 1번째 - 많은 라벨의 썸네일을 일정수로 다운샘플링하여 진행 / 2번째 - 라벨들을 업샘플링,다운샘플링하여 의도적으로 비율를 똑같이 맞춰 진행</p></div>
 
 ### ○ 결론
 
