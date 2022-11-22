@@ -149,11 +149,16 @@
 - 전체적으로 그림이 균일하지 않은 썸네일로 장르를 구분 하는 것이 쉽지않다.<br>
 
 ### ○ 추가 - 분류기준을 바꾸어서 재학습
-
+- 장르에서 작가별로 분류기준 변경<br>
+<div><img width="500" alt="change" src="https://user-images.githubusercontent.com/79880476/203196731-9b8af10f-c74b-4f59-a7e0-2780ba3f6d21.jpg">
+<img width="500" alt="pretrain" src="https://user-images.githubusercontent.com/79880476/203196688-ece5735a-b592-4b64-b394-9af72ddaa2db.jpg">
+<p>- 장르별로 학습시켜놓은 사전 모델로 작가별 그림으로 분류하니까 성능이 대폭 상승함을 볼 수 있다. 즉,그림체를 분류 하는 것은 장르별보다 작가별이 더 적합하다.</p></div>
 
 
 ### ○ 참고 논문
-
+- ResNet50 : He, Kaiming, et al. "Deep residual learning for image recognition." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
+- VGG19, VGG16 : Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).
+- InceptionV3 : Szegedy, Christian, et al. "Rethinking the inception architecture for computer vision." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
 
 ### ○ 역할
 - 김용재 : 
