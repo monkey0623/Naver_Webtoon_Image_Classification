@@ -161,8 +161,8 @@
 - InceptionV3 : Szegedy, Christian, et al. "Rethinking the inception architecture for computer vision." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.
 
 ### ○ 역할
-- 김용재 : 썸네일 크롤링(드라마,일상), 모델핸들링
-- 이훈석 : 썸네일 크롤링(개그,순정), 데이터전처리(증강)
-- 오혜인 : 썸네일 크롤링(감성,스릴러), 데이터전처리
+- 오혜인(조장) : 썸네일 크롤링(감성,스릴러), 데이터전처리, PPT작성
+- 김용재 : 썸네일 크롤링(드라마,일상), 데이터전처리 
+- 이훈석 : 썸네일 크롤링(개그,순정), 모델핸들링
 - 석민재 : 썸네일 크롤링(액션,판타지), 모델핸들링
 - 한서연 : 썸네일 크롤링(무협,스포츠), PPT작성
