@@ -131,12 +131,12 @@
 
 ### ○ 성능개선의 노력
 - 모호한 섬네일의 이진분류<br>
-<div><img width="500" alt="2jinbunryu" src="https://user-images.githubusercontent.com/79880476/203189909-5c668354-5339-402e-ae3b-a063d49ccf6d.jpg"><p>- 이진분류 시 예측 정확도가 87%이상..첫번째 가설 부적합.</p></div>
+<div><img width="500" alt="2jinbunryu" src="https://user-images.githubusercontent.com/79880476/203189909-5c668354-5339-402e-ae3b-a063d49ccf6d.jpg"><p>- 이진분류 시 예측 정확도가 87%이상</p></div>
 
 - 라벨수 제한<br>
 <div><img width="500" alt="labelsu" src="https://user-images.githubusercontent.com/79880476/203189934-9eb07e36-e2fa-4342-9b99-ead0eb9a6f37.jpg">
 <img width="500" alt="labelsuacc" src="https://user-images.githubusercontent.com/79880476/203189939-20498ee0-d6b0-4829-ae64-caf9207ae779.jpg">
-<p>- 라벨의 개수를 조절함으로써 성능 개선의 효과를 봤고, 구분이 모호한 장르들을 제한했을 때, 또 한번 성능이 크게 개선 되는 것을 확인했다.</p></div>
+<p>-이진 분류를 했을 시 성능이 매우 우수한 것을 확인함.라벨의 수를 줄임으로써 성능을 개선 확인</p></div>
 
 - 불균형 해소를 위한 전처리<br>
 <div><img width="500" alt="imbalgetout" src="https://user-images.githubusercontent.com/79880476/203189884-c36dc45b-d6f4-4593-8ac1-bb6e3a74edf8.jpg">
@@ -144,6 +144,12 @@
 <p>- 1번째 - 많은 라벨의 썸네일을 일정수로 다운샘플링하여 진행 / 2번째 - 라벨들을 업샘플링,다운샘플링하여 의도적으로 비율를 똑같이 맞춰 진행</p></div>
 
 ### ○ 결론
+- 라벨의 개수를 조절함으로써 성능 개선의 효과 O / 단 구분이 모호한 장르들을 제한했을 때 성능 개선을 확인<br>
+- 각 라벨의 썸네일의 비율을 맞춰 2가지 방법으로 불균형 해소 후 학습하였지만, 크게 성능 개선을 못함<br>
+- 전체적으로 그림이 균일하지 않은 썸네일로 장르를 구분 하는 것이 쉽지않다.<br>
+
+
+### ○ 추가 - 분류기준을 바꾸어서 재학습
 
 ### ○ 참고 논문
 
